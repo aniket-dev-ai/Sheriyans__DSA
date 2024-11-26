@@ -17,3 +17,40 @@
 // let b = Number(prompt("Enter the value of b:"));
 
 // console.log((a>b)? `a = ${a} is larger` : ` b = ${b} is larger`)
+
+// let b = Number(prompt("Enter the value of b:"));
+
+// console.log((b%2 == 0 )? ` ${b} is even` : ` ${b} is odd`)
+
+// let a = prompt("enter name")
+// let b = prompt("enter age")
+
+// console.log((b>18)?`hello ${a} , you are a voter` :`hello ${a} , you will be eligible to vote in ${18-b} years`);
+
+// let b = Number(prompt("Enter week number"));
+
+// switch (b) {
+//   case 1:
+//     console.log("Monday");
+//     break;
+//   case 2:
+//     console.log("Tuesday");
+//     break;
+//   case 3:
+//     console.log("Wednesday");
+//     break;
+//   case 4:
+//     console.log("Thursday");
+//     break;
+//   case 5:
+//     console.log("Friday");
+//     break;
+//   case 6:
+//     console.log("Saturday");
+//     break;
+//   case 7:
+//     console.log("Sunday");
+//     break;
+//   default:
+//     console.log("Invalid input. Please enter a number between 1 and 7.");
+// }
