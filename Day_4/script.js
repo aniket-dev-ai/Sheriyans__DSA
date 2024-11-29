@@ -47,3 +47,24 @@ for (i = n; i > 0; i = Math.floor(i / 10)) {
 }
 
 console.log(r % x == n ? `yes` : `no`);
+
+// make it single digit
+
+function add(i) {
+  var sum = 0;
+  for (; i > 0; i = Math.floor(i / 10)) {
+    sum += i % 10;
+  }
+  return sum;
+}
+
+n = 6758;
+l = add(n);
+
+while (l > 9) {
+  l = add(l);
+}
+console.log(l);
+
+// fibonacci series
+
