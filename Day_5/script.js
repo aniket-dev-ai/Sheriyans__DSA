@@ -135,3 +135,37 @@
 // }
 
 // console.log(pal(m));
+
+// fibonacci Series
+ 
+// function fact(a,b,n , str){
+//   if(n==0){
+//     return str;
+//   }
+  
+//   c = a+b;
+//   str += c + " "
+//   return fact(b,c,n-1,str)
+// }
+
+// console.log(fact(0,1,10 , " 0 1 "));
+
+let temp = [];
+let num = [];
+
+function sub(arr) {
+  if (arr.length === 0) {
+    return num;   
+  }
+  
+  num.push(...arr);  // Add all elements of arr to num
+  temp.push(arr[arr.length - 1]);  // Add the last element of arr to temp
+  num.push(...temp);  // Add the elements of temp to num
+
+  // Call sub recursively with the array minus the last element
+  return sub(arr.slice(0, -1));
+}
+
+console.log(sub([1, 2, 3, 4, 5]));  // Output will be the modified array
+
+
