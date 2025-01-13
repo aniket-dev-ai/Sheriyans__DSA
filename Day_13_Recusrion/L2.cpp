@@ -62,6 +62,13 @@ int binaryFind(vector<int> &arr, int s, int e, int t)
         return binaryFind(arr, s, mid - 1, t);
     }
 }
+
+void printdigit(int n ){
+    if(n<=0) {return;}
+    printdigit(n/10);
+    cout<<n%10<<" , ";
+}
+
 int main()
 
 {
@@ -81,7 +88,9 @@ int main()
     // cout << max(arr, i) << endl;
     // cout << binaryFind(arr, 0, arr.size() - 1, p);
 
+    int n = 867434;
 
-    
+    printdigit(n);
+
     return 0;
 }
