@@ -10,7 +10,7 @@ void PrintHello(int n ){
 }
 
 void printCount(int n){
-    if(n==0)return;
+    if(n==0) return;
     printCount(n-1);
     cout<<n<<endl;
 }
