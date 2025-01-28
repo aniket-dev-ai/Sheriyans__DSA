@@ -4,17 +4,17 @@ public:
         if (n == 0) return 1; // Base case: x^0 = 1
         if (x == 0) return 0; // Special case: 0^n = 0 for n > 0
         
-        long long absN = abs((long long)n); // Handle negative n safely
+        long long absN = abs((long long)n);  
         double result = 1.0;
 
         while (absN > 0) {
-            if (absN % 2 == 1) { // If current power is odd
+            if (absN % 2 == 1) {  
                 result *= x;
             }
-            x *= x; // Square the base
-            absN /= 2; // Reduce power by half
+            x *= x;  
+            absN /= 2;  
         }
 
-        return n < 0 ? 1 / result : result; // Handle negative exponents
+        return n < 0 ? 1 / result : result;  
     }
 };
