@@ -1,20 +1,26 @@
 class Solution {
 public:
-
     void duplicateZeros(vector<int>& arr) {
-     vector<int> duplicate(arr);
-     int size = arr.size(); 
-     int i = 0 , j = 0;
-     for(;i<size && j<size;j++){
-        if(duplicate[j]==0){
-            arr[i] = 0;
-           if (i + 1 < size) arr[i + 1] = 0; 
-                i += 2;
-        }else{
-            arr[i]=duplicate[j];
-            i++;
-        }
-     }
+        int size = arr.size();
+        int count = 0; // Zero count ke basis par shifting calculate karenge
+        int i = 0, j = 0;
 
+        // Count effective new length after duplicating zeros
+        for (; j < size; j++) {
+            if (arr[j] == 0) count++;
+        }
+
+        j = size - 1; // End se traverse karenge
+        int newLength = size + count;
+
+        // Reverse traverse and shift elements
+        for (i = newLength - 1; j >= 0; j--) {
+            if (arr[j] == 0) {
+                if (i < size) arr[i] = 0;
+                i--;
+            }
+            if (i < size) arr[i] = arr[j];
+            i--;
+        }
     }
 };
