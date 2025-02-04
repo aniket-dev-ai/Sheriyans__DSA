@@ -10,11 +10,9 @@ public:
                 if(nums[i]>nums[j]){
                     c++;
                 }
-                if(j==size-1){
-
-            ans.push_back(c);
-                }
+                 
             }
+            ans.push_back(c);
          }
          return ans;
     }
