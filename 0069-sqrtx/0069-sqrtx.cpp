@@ -1,13 +1,19 @@
 class Solution {
 public:
     int mySqrt(int x) {
-        if (x== 0 || x == 1) return x;
-        for(int i = 1 ; i<=x;i++){
-            if((i*i)==x || (i*i)<=x){
-                return i;
-                break;
-            }
+         if (x == 0 || x == 1) return x;
+
+    int start = 0, end = x, ans = 0;
+    while (start <= end) {
+        int mid = start + (end - start) / 2;
+
+        if (mid <= x / mid) {
+            ans = mid;
+            start = mid + 1;
+        } else {
+            end = mid - 1;
         }
-        return 0;
     }
+    return ans;
+}
 };
