@@ -4,8 +4,7 @@ public:
     vector<int> a;
     for(int i = 0 ; i<l.size();i++){
         int ia = (int)l[i];
-        a.push_back(ia);
-        cout<<a[i]<<" ";
+        a.push_back(ia); 
     }
     return a;
  }
