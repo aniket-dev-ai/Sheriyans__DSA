@@ -1,8 +1,16 @@
 class Solution {
 public:
-    int divide(int dividend, int divisor) {
-        if(dividend < 0 && divisor >0) return -1 * abs(dividend/divisor);
-        if(dividend > 0 && divisor <0) return -1 * abs(dividend/divisor);
-        return abs(dividend/divisor);
+    int divide(int d, int di) {
+        long long t = d;
+        long long y = di;
+        if(t < 0 && y >0) return -1 * abs(t/y);
+        if(t > 0 && y <0) return -1 * abs(t/y);
+         long long ans = abs(t/y);
+         if(ans<INT_MIN){
+         return ans+1;
+         }if(ans>INT_MAX){
+            return ans-1;
+         }
+         return ans;
     }
 };
