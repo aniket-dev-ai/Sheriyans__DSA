@@ -12,7 +12,9 @@ public:
 
     char nextGreatestLetter(vector<char>& li, char t) {
         vector<int> l = convert(li);
-     
+        if((int)t > l[l.size() - 1]) {
+            return li[0];
+        }
         int s = 0, e = l.size() - 1;
         int m = s + (e - s) / 2;
         while (s <= e) {
