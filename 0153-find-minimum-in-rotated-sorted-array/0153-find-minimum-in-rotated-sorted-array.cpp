@@ -2,6 +2,9 @@ class Solution {
 public:
     int findMin(vector<int>& n) {
         if(n.size()==1) return n[0];
+        if(n.size()>1&&n[n.size()-1]<n[n.size()-2]){
+            return n[n.size()-1];
+        }
         // if(n[n.size()-1] == 1) return 1;
       long long  int s = 0, e = n.size() - 1;
         while (s <= e) {
